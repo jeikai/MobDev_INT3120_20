@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/miDial"
+        android:title="ACTION_DIAL"/>
+    <item
+        android:id="@+id/miWebSearch"
+        android:title="ACTION_WEB_SEARCH"/>
+    <item
+        android:id="@+id/miSend"
+        android:title="ACTION_SEND"/>
+    <item
+        android:id="@+id/miMessage"
+        android:title="ACTION_SENDTO"/>
+    <item
+        android:id="@+id/miPictures"
+        android:title="ACTION_GET_CONTENT"/>
+    <item
+        android:id="@+id/miContacts"
+        android:title="ACTION_VIEW contacts"/>
+    <item
+        android:id="@+id/miContactsId"
+        android:title="ACTION_VIEW specific contact"/>
+    <item
+        android:id="@+id/miEditContact"
+        android:title="ACTION_EDIT contact"/>
+    <item
+        android:id="@+id/miMapAddress"
+        android:title="ACTION_VIEW address"/>
+    <item
+        android:id="@+id/miMapCoordinates"
+        android:title="ACTION_VIEW coordinates"/>
+    <item
+        android:id="@+id/miMusic"
+        android:title="MUSIC_PLAYER"/>
+    <item
+        android:id="@+id/miStop"
+        android:title="stop application"/>
+</menu>

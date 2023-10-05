@@ -1,0 +1,90 @@
+Cấu trúc của một dự án Android: 
+    java: nơi chứa mã nguồn java và các package
+    res: nơi chứa tất cả các tài nguyên trong ứng dụng
+    manifests: chứa file AndroidManifest.xml đặc tả ứng dụng
+        AndroidManifest: kê khai những thông tin thiết yếu về ứng dụng, mọi app đều phải có file này
+Các thành phần của một ứng dụng Android:
+    Activity:
+        Trong ứng dụng Android, Activity đóng vai trò là một cửa sổ (hay màn hình, form) nơi người dung có thể tương tác với ứng dụng
+        Một ứng dụng thường có một hoặc nhiều Activity, Activity được khởi chạy đầu tiên khi ứng dụng hoạt động là MainActivity
+        Activity có thể hiển thị ở chế độ toàn màn hình hoặc ở dạng cửa số với kích thước nhất định
+        Các Activity có thể gọi đến Activity khác, các Activity được gọi sẽ nhận được tương tác ở thời điểm đó
+        Các trạng thái:
+            Resumed: Đang trong trạng thái nhận tương tác
+            Paused: Không thể tương tác nhưng người dùng vẫn nhìn thấy (một phần hoặc toàn phần) 
+            Stopped: Thực hiện ở chế độ ngầm
+        Các hàm sự kiện trạng thái của Activity:
+            onCreate() : được gọi khi Activity được khởi tạo 
+            onStart() : được gọi khi Activity bắt đầu hiện ra (chúng ta bắt đầu nhìn thấy giao diện) 
+            onResume(): bắt đầu nhận các tương tác với người dùng 
+            onPause(): được gọi khi activity bi dừng lại để chuyển qua activity khác 
+            onStop(): được gọi khi activity biến mất khỏi màn hình 
+            onDestroy(): được gọi khi activity bị hủy (hủy chủ động hoặc bị hủy bởi hệ thống trong trường hợp hệ điều hành xác nhận thiếu RAM) 
+            onRestart(): được gọi khi activity được khởi động lại sau khi đã bị dừng
+        Tạo Activity cho ứng dụng:
+            Tạo lớp mới kế thừa (extend) từ những lớp cha như AppCompatActivity, Activity, FragmentActivity
+            Xây dựng giao diện trong tài nguyên res/layout
+            Khai báo Activity trong tập tin AndroidManifest.xml
+            Tạo các hàm thực thi theo trạng thái Activity
+    View:
+        View là các thành phần giao diện được sử dụng để tạo ra các điều khiển trên màn hình 
+        Gồm 2 dạng: View, ViewGroup
+        Thuộc tính:
+            layout_width
+            layout_height
+            layout_marginTop
+            layout_marginBottom
+            layout_marginLeft
+            layout_marginRight
+            layout_gravity
+            paddingLeft/Right/Top/Bottom
+        Đơn vị:
+            dp (hoặc dip) - Density-independent pixel (điểm ảnh không phụ thuộc vào mật độ màn hình). Đây là một đơn vị đo chiều dài vật lý (=1/160 hay 0.00625 inch) được khuyến nghị dùng trong hầu hết các trường hợp đặt kích thước của view trong layout. 
+            sp - Scale-independent pixel, đơn vị này tương tự dp, được dùng khi mô tả kích thước font chữ (font size) 
+            pt - Point. 1 point = 1/72 inch, dựa trên kích thước vật lý thật của màn hình. 
+            px – Pixel – một pixel vật lý trên màn hình, đơn vị này không được khuyên dùng trong thiết kế giao diện ứng dụng vì giao diện sẽ hiển thị không đồng nhất trên các màn hình có độ phân giải khác nhau.
+    Service:
+        Service được sử dụng để thực hiện các tác vụ cần nhiều thời gian, chạy ở chế độ ngầm và thường không cần giao diện hiển thị
+        Service có thể khởi chạy và hoạt động xuyên suốt ngay cả khi ứng dụng không hoạt động
+
+    Broadcast Receiver:
+        Thành phần ứng dụng cho phép truyền tải các thông báo trong phạm vi toàn hệ thống, không có giao diện nhưng có thể thực hiện thông báo thông qua thanh trạng thái
+        2 dạng:
+            Hệ thống: các thông báo được truyền trực tiếp từ hệ thống như tắt màn hình, pin yếu, thay đổi kết nối mạng…
+            Ứng dụng: truyền thông báo đến các thành phần trong ứng dụng, khởi động Service, tải nội dung đến ứng dụng
+
+    Content Provider:
+        Cung cấp cách thức truy cập tập hợp các dữ liệu ứng dụng. Dữ liệu có thể lưu trữ ở nhiều dạng tệp tin, SQLite, tài nguyên Web và rất nhiều mục lưu trữ khác
+        Trong Android, một số Content Provider được xây dựng sẵn như: Danh bạ, tài nguyên đa phương tiện, lịch v.v 
+
+    Notification:
+        Notification là chức năng gửi thông báo tới người dùng thông qua khu vực thông báo trên thanh trạng thái
+        Giao diện của thông báo không thuộc giao diện của ứng dụng mà thuộc về HĐH nhưng ứng dụng có thể tùy biến được thông qua một số phương thức mà Android cung cấp sẵn
+
+    Intent:
+        Intent là đối tượng mang thông điệp cho phép tạo ra các yêu cầu, hành động giữa các thành phần trong ứng dụng hay giữa các ứng dụng khác nhau
+        Intent thường được sử dụng trong 3 trường hợp sau:
+            Khởi động Activity
+            Khởi động Service
+            Chuyển phát thông tin cho Broadcast Receiver
+
+
+Các hướng/vấn đề trong lập trình Android:
+    Đọc ghi dữ liệu internal, external
+    Lập trình đa phương tiện, audio, video
+    Game
+    Multitouch
+    Multithread
+    Camera, Pictures
+    Text to speech
+    Email, SMS, Call
+    Notification
+    Database, SQLite
+    Service
+    Network, socket
+    Internet, HTTP, Web service, JSON, API 
+    Tích hợp Facebook, Youtube
+    LocationManager , LocationProvider
+    Google maps /places API
+    Sensors ....
+

@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">B2</string>
+    <string name="app_name">bai_tap</string>
+    <string-array name="number">
+        <item>997</item>
+        <item>998</item>
+        <item>999</item>
+        <item>1000</item>
+        <item>1001</item>
+    </string-array>
 </resources>

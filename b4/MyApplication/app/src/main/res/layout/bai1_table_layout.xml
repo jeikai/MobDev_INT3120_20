@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Homer"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Give Generously" />
+    </TableRow>
+
+    <TableRow>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paypal" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Direct" />
+        </RadioGroup>
+    </TableRow>
+
+    <TableRow>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:layout_column="1"
+            android:layout_gravity="center_horizontal"/>
+    </TableRow>
+
+    <TableRow>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="25"
+            android:layout_span="2"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/tvAmount"
+            android:text="Amount"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/etAmount"
+            android:ems="10"
+            android:inputType="textPersonName" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/btnDonate"
+            android:layout_height="wrap_content"
+            android:text="Donate"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total so far: $1998"
+            android:textSize="20sp"
+            android:layout_gravity="center"/>
+    </TableRow>
+
+
+
+    <TableRow>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_dialog_email"
+            android:layout_column="1"/>
+    </TableRow>
+
+</TableLayout>
