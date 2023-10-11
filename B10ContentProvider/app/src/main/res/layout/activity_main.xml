@@ -9,11 +9,26 @@
 
 
     <Button
-        android:layout_height="wrap_content"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:text="Read contacts"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
         android:gravity="center"
+        android:onClick="getContact"
+        android:text="Read contacts"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        android:onClick="getContact"/>
+        tools:layout_editor_absoluteX="151dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="insertData"
+        android:text="Insert contacts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="151dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Intent chứa cả activity và service
-        intent = new Intent(MainActivity.this, DemoService.class);
+        intent = new Intent(MainActivity.this, DemoService2.class);
     }
     public void demo_startService(View view) {
         intent.putExtra("data", "demo data chay ngam Service");

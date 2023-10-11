@@ -16,7 +16,10 @@
             android:name=".DemoService"
             android:enabled="true"
             android:exported="true"></service>
-
+        <service
+            android:name=".DemoService2"
+            android:enabled="true"
+            android:exported="true"></service>
         <activity
             android:name=".MainActivity"
             android:exported="true">
